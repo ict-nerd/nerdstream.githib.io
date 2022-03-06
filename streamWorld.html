@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: rgb(112, 83, 83);
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+
+body {
+  background-color: lightblue;
+
+
+#CreatorYoutube {rgb(255, 0, 0);}
+#home {background-color: rgb(255, 0, 0);}
+#movies {background-color: green;}
+#About {background-color: orange;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('movies', this, 'green')" id="defaultOpen">movies</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+<button class="tablink" onclick="openPage('#CreatorYoutube', this, 'red')"> creator youtube channel</button>
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>a website made in March two thousand twenty-two in March, <br>you will find here a lot of links to movies from youtube . </p>
+</div>
+
+<div id="movies" class="tabcontent">
+  <h3>movies</h3>
+  <p>here are some free movies!</p> 
+  <h1> 
+      christmas:
+  </h1>
+   <h1>
+       the christmas chronicles 1
+   </h1>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/yyFaf8G3j4A?start=44" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+<p> home alone lost in new york</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KCOEI2Ls3vk?start=3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p> home alone </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hviLEw9IlNs?start=2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div id="#CreatorYoutube" class="tabcontent">
+    <h3>youtube channel of the creator</h3>
+    <p>channel name:Ict nerd <br> here are some videos </p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7s58ucz4xco" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <h2> 
+      how to hard reset a laptop
+  </h2>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/eAQYwFRyku4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p>
+      pc tips part 1
+  </p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p>just a guy who was bored so who made his own website. <br> website not done yet.</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
